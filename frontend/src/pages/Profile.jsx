@@ -32,7 +32,7 @@ const Profile = () => {
                         inputType="text"
                         inputName="name"
                         inputId="name"
-                        placeholder="Enter first name"
+                        placeholder="Enter name"
                         autoFocus="true"
                         required="true"
                         defaultValue={name}
