@@ -30,8 +30,8 @@ export const getSingleJob = async (req, res) => {
 }
 
 export const updateJob = async (req, res) => {
-    const job = await jobModel.findById(req.params.id);
-    const updatedJob = await jobModel.findByIdAndUpdate(id, req.body, {
+    // const job = await jobModel.findById(req.params.id);
+    const updatedJob = await jobModel.findByIdAndUpdate(req.params.id, req.body, {
         new: true
     })
 

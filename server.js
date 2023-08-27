@@ -7,6 +7,11 @@ import morgan from "morgan";
 import mongoose from 'mongoose'
 import cookieParser from 'cookie-parser'
 
+//PUBLIC
+import { dirname } from 'path'
+import { fileURLToPath } from 'url';
+import path from 'path';
+
 //CUSTOM IMPORTS
 import jobRouter from './routes/jobRouter.js'
 import authRouter from './routes/authRouter.js'
@@ -15,6 +20,9 @@ import userRouter from './routes/userRouter.js'
 // CUSTOM MIDDLEWARE
 import errorHandlerMiddleware from './middlewares/errorHandlerMiddleware.js';
 import { authenticateUser } from './middlewares/authMiddleware.js';
+
+const __dirname = dirname(fileURLToPath(import.meta.url))
+app.use(express.static(path.resolve(__dirname, './public')))
 
 if (process.env.NODE_ENV === "development") {
     app.use(morgan("dev"));
