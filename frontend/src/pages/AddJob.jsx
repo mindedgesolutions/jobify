@@ -23,7 +23,7 @@ export const action = async ({ request }) => {
 const AddJob = () => {
     const { user } = useOutletContext();
     const navigation = useNavigation();
-    const isSubmitting = navigation.state === "processing ...";
+    const isSubmitting = navigation.state === "submitting";
 
     return (
         <Wrapper>

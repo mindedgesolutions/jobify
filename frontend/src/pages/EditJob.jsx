@@ -36,7 +36,7 @@ const EditJob = () => {
     let job = useLoaderData();
     job = job.data
     const navigation = useNavigation()
-    const isSubmitting = navigation.state === 'processing ...'
+    const isSubmitting = navigation.state === 'submitting'
 
     return (
         <Wrapper>
